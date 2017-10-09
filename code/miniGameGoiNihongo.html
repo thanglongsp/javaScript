@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Nghĩa của từ </p>
+<p id="demo"></p>
+
+<form id="form1">
+<input name="nameInput" type="text">
+</form>
+
+<button onclick = "Myfunction()">Check!</button>
+<button onclick="next()">Next</button>
+
+<p id="result">result!</p>
+
+<script>
+function next(){
+	location.reload();
+}
+	var person = {ひと:"người", さかな:"cá", いぬ:"chó"};
+	var arr = ["ひと", "さかな", "いぬ"];	
+    var i = Math.floor(Math.random() * arr.length);
+	document.getElementById("demo").innerHTML = arr[i];   
+function Myfunction(){
+	var person = {ひと:"người", さかな:"cá", いぬ:"chó"};
+	var arr = ["ひと", "さかな", "いぬ"];
+    var x,y;
+    
+    x = document.getElementById("form1");
+	y = x.elements["nameInput"].value;
+    
+    document.getElementById("result").innerHTML = y;
+    
+	if(person[arr[i]] == y){
+	document.getElementById("result").innerHTML = true;
+	}
+	else document.getElementById("result").innerHTML = false;
+}
+</script>
+
+</body>
+</html>
+
