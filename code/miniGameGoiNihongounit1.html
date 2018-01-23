@@ -29,7 +29,7 @@
 <br>
 
 <!-- <img id="result" src="D:\Programing\javaScript\image\off.png" style="width:100px"><br> -->
-<button onclick = "Myfunction()">Check!</button>
+<button onclick = "Myfunction()">Check!</button> <button onclick = "function1()">next!</button>
 <br>
 <br>
 <p id = "result">
@@ -38,6 +38,7 @@
 </div>
 </center>
 <script>
+	var i;
 	var arr = [
 	"高齢_こうれい",
 	"年上_としうえ",
@@ -158,10 +159,13 @@
 	"値上がり_ねあがり",
 	"生_なま"
 	];	
-	
-    var i = Math.floor(Math.random() * arr.length);
-	document.getElementById("demo").innerHTML = arr[i];   
-
+function function1(){
+    i = Math.floor(Math.random() * arr.length);
+	document.getElementById("demo").innerHTML = arr[i];  
+	document.getElementById("result").innerHTML ="";
+	document.getElementById("answer").innerHTML ="";
+	location.repeat();
+}
 function Myfunction(){
 	var person = {
 	高齢_こうれい:"cao tuổi",
