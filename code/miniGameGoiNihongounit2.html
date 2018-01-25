@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Try hard N3'words</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css"  href="css/css_form.css">
+</head>
+<body>
+<center>
+<div class= "col-sm-5">
+<image width = "100%" src = "D:\Programing\javaScript\image\loading.gif"><br>
+<p>がんばってね！</p>
+</div>
+
+<div class="col-sm-7">
+<br>
+<br>
+<br>
+<p>What is this word mean? </p>
+<p id="demo"></p>
+
+<form id="form1">
+<input id = "input" name="nameInput" type="text"> 
+</form>
+<br>
+
+<!-- <img id="result" src="D:\Programing\javaScript\image\off.png" style="width:100px"><br> -->
+<button onclick = "Myfunction()">Check!</button> <button onclick = "function1()">next!</button>
+<br>
+<br>
+<p id = "result">
+<br>
+</p><p id = "answer"></p>
+</div>
+</center>
+<script>
+	var i;
+	var arr = [
+	"渇く_かわく",
+	"嗅ぐ_かぐ",
+	"叩く_たたく",
+	"殴る_なぐる",
+	"ける",
+	"抱く_だく",
+	"倒れる_たおれる",
+	"倒す_たおす",
+	"起きる_おきる",
+	"起こす_おこす",
+	"尋ねる_たずねる",
+	"呼ぶ_よぶ",
+	"叫ぶ_さけぶ",
+	"黙る_だまる",
+	"飼う_かう",
+	"数える_かぞえる",
+	"乾く_かわく",
+	"乾かす_かわかす",
+	"畳む_たたむ",
+	"誘う_さそう",
+	"おごる_おごる",
+	"預かる_あずかる",
+	"預ける_あずける",
+	"決まる_きまる",
+	"決める_きめる",
+	"写る_うつる",
+	"写す_うつす",
+	"思い出す_おもいだす",
+	"教わる_おそわる",
+	"申し込む_もうしこむ",
+	"断る_ことわる",
+	"見つかる_みつかる",
+	"見つける_みつける",
+	"捕まる_つかまる",
+	"捕まえる_つかまえる",
+	"乗る_のる",
+	"乗せる_のせる",
+	"降りる_おりる",
+	"降ろす_おろす",
+	"直る_なおる",
+	"直す_なおす",
+	"治る_なおる",
+	"治す_なおす",
+	"亡くなる_なくなる",
+	"亡くす_なくす",
+	"生まれる_うまれる",
+	"生む_うむ",
+	"出会う_であう",
+	"訪ねる_たずねる",
+	"付き合う_つきあう",
+	"効く_きく",
+	"はやる_はやる",
+	"経つ_たつ",
+	"間に合う_まにあう",
+	"間に合わせる_まにあわせる",
+	"通う_かよう",
+	"込む_こむ",
+	"すれ違う_すれちあう",
+	"掛かる_かかる",
+	"掛ける_かける",
+	"動く_うごく",
+	"動かす_うごかす",
+	"離れる_はなれる",
+	"離す_はなす",
+	"ぶつかる_ぶつかる",
+	"ぶつける_ぶつける",
+	"こぼれる_こぼれる",
+	"こぼす_こぼす",
+	"ふく_ふく",
+	"片付く_かたづく",
+	"片付ける_かたづける",
+	"包む_つつむ",
+	"張る_はる",
+	"無くなる_なくなる",
+	"無くす_なくす",
+	"足りる_たりる",
+	"残る_のこる",
+	"残す_のこす",
+	"腐る_くさる",
+	"むける_むける",
+	"むく_むく",
+	"滑る_すべる",
+	"積もる_つもる",
+	"積む_つむ",
+	"空く_あく",
+	"空ける_あける",
+	"下がる_さがる",
+	"下げる_さげる",
+	"冷える_ひえる",
+	"冷やす_ひやす",
+	"冷める_さめる",
+	"冷ます_さます",
+	"燃える_もえる",
+	"燃やす_もやす",
+	"沸く_わく",
+	"沸かす_わかす",
+	"鳴る_なる",
+	"鳴らす_ならす",
+	"役立つ_やくだつ",
+	"役立てる_やくだてる"
+	];	
+function function1(){
+    i = Math.floor(Math.random() * arr.length);
+	document.getElementById("demo").innerHTML = arr[i];  
+	document.getElementById("result").innerHTML ="";
+	document.getElementById("answer").innerHTML ="";
+	$("#input").val("");
+	location.repeat();
+}
+function Myfunction(){
+	var person = {
+	渇く_かわく:"khát",
+	嗅ぐ_かぐ:"ngửi",
+	叩く_たたく:"đánh,vỗ",
+	殴る_なぐる:"đấm",
+	ける:"đá",
+	抱く_だく:"ôm",
+	倒れる_たおれる:"đổ",
+	倒す_たおす:"làm đổ",
+	起きる_おきる:"thức dậy",
+	起こす_おこす:"đánh thức",
+	尋ねる_たずねる:"hỏi",
+	呼ぶ_よぶ:"gọi",
+	叫ぶ_さけぶ:"gào to",
+	黙る_だまる:"im lặng",
+	飼う_かう:"nuôi",
+	数える_かぞえる:"đếm",
+	乾く_かわく:"khô",
+	乾かす_かわかす:"làm khô",
+	畳む_たたむ:"gấp",
+	誘う_さそう:"mời,rủ",
+	おごる_おごる:"chiêu đãi",
+	預かる_あずかる:"chăm sóc",
+	預ける_あずける:"gửi",
+	決まる_きまる:"được quyết định",
+	決める_きめる:"quyết định",
+	写る_うつる:"chụp được",
+	写す_うつす:"chụp",
+	思い出す_おもいだす:"nhớ lại",
+	教わる_おそわる:"được dạy",
+	申し込む_もうしこむ:"đăng ký",
+	断る_ことわる:"từ chối",
+	見つかる_みつかる:"được tìm thấy",
+	見つける_みつける:"tìm thấy",
+	捕まる_つかまる:"bị bắt",
+	捕まえる_つかまえる:"bắt",
+	乗る_のる:"leo lên",
+	乗せる_のせる:"cho lên",
+	降りる_おりる:"xuống",
+	降ろす_おろす:"cho xuống",
+	直る_なおる:"được sửa",
+	直す_なおす:"sửa",
+	治る_なおる:"hồi phục",
+	治す_なおす:"cứu chữa",
+	亡くなる_なくなる:"chết",
+	亡くす_なくす:"mất",
+	生まれる_うまれる:"được sinh ra",
+	生む_うむ:"sinh",
+	出会う_であう:"gặp",
+	訪ねる_たずねる:"thăm",
+	付き合う_つきあう:"hẹn hò, giao tiếp",
+	効く_きく:"có hiệu quả",
+	はやる_はやる:"phổ biến",
+	経つ_たつ:"qua",
+	間に合う_まにあう:"làm cho kịp giờ",
+	間に合わせる_まにあわせる:"kịp giờ",
+	通う_かよう:"đi làm, học",
+	込む_こむ:"đông",
+	すれ違う_すれちあう:"vượt, lướt",
+	掛かる_かかる:"được bao phủ",
+	掛ける_かける:"bao phủ",
+	動く_うごく:"hoạt động",
+	動かす_うごかす:"di chuyển",
+	離れる_はなれる:"tránh xa",
+	離す_はなす:"tách ra",
+	ぶつかる_ぶつかる:"bị đâm",
+	ぶつける_ぶつける:"đâm",
+	こぼれる_こぼれる:"bị tràn",
+	こぼす_こぼす:"tràn",
+	ふく_ふく:"lau",
+	片付く_かたづく:"được dọn dẹp",
+	片付ける_かたづける:"dọn dẹp",
+	包む_つつむ:"bọc",
+	張る_はる:"dán",
+	無くなる_なくなる:"bị mất",
+	無くす_なくす:"mất",
+	足りる_たりる:"đủ",
+	残る_のこる:"bị thừa",
+	残す_のこす:"thừa",
+	腐る_くさる:"thối",
+	むける_むける:"bị lột",
+	むく_むく:"lột",
+	滑る_すべる:"trượt",
+	積もる_つもる:"được tích tụ",
+	積む_つむ:"tích tụ",
+	空く_あく:"bị thủng",
+	空ける_あける:"thủng",
+	下がる_さがる:"bị giảm",
+	下げる_さげる:"giảm",
+	冷える_ひえる:"bị lạnh",
+	冷やす_ひやす:"làm lạnh",
+	冷める_さめる:"bị nguội",
+	冷ます_さます:"làm nguội",
+	燃える_もえる:"cháy",
+	燃やす_もやす:"đốt",
+	沸く_わく:"sôi",
+	沸かす_わかす:"đun sôi",
+	鳴る_なる:"kêu",
+	鳴らす_ならす:"làm kêu",
+	役立つ_やくだつ:"hữu ích",
+	役立てる_やくだてる:"được sử dụng",
+	};
+	
+    var x,y;
+    
+    x = document.getElementById("form1");
+	y = x.elements["nameInput"].value;
+    
+    document.getElementById("result").innerHTML = y;
+    
+	if(person[arr[i]] == y){
+	document.getElementById("result").innerHTML = "true";
+	document.getElementById("answer").innerHTML = "";
+	}else {
+	document.getElementById("result").innerHTML = "fail";
+	document.getElementById("answer").innerHTML = person[arr[i]];
+	}
+}
+
+</script>
+
+</body>
+</html>
+
