@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Try hard N3'Kanji</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css"  href="css/css_form.css">
+</head>
+<body>
+<center>
+<div class= "col-sm-5">
+<image width = "60%" src = "D:\Programing\javaScript\image\haicot.gif"><br>
+<button onclick = "enableLoop()"> ahihi -_- quẩy nào :))</button> 
+<br>
+<audio id="myAudio" controls>
+  <source src="D:\Programing\javaScript\music\kpdvd.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<div class="col-sm-7">
+<br>
+<br>
+<br>
+<p>What is this word mean? </p>
+<h1 id="demo"></h1>
+
+<form id="form1">
+<input id = "input" name="nameInput" type="text"> 
+</form>
+<br>
+
+<!-- <img id="result" src="D:\Programing\javaScript\image\off.png" style="width:100px"><br> -->
+<button onclick = "Myfunction()">Check!</button> <button onclick = "function1()">next!</button>
+<br>
+<br>
+<p id = "result"></p>
+<h3 id = "answer"></h3>
+<p id = "mean"></p>
+</div>
+</center>
+<script>
+	var myaudio = document.getElementById("myAudio");
+	var i;
+	var arr = [
+	"愛",
+	"暗",
+	"位",
+	"偉",
+	"易",
+	"違",
+	"育",
+	"因",
+	"引",
+	"泳",
+	"越",
+	"園",
+	"演",
+	"煙",
+	"遠",
+	"押",
+	"横",
+	"王",
+	"化",
+	"加",
+	"科",
+	"果",
+	"過",
+	"解",
+	"回",
+	"皆",
+	"絵",
+	"害",
+	"格",
+	"確",
+	"覚",
+	"掛",
+	"割",
+	"活",
+	"寒",
+	"完",
+	"官",
+	"感",
+	"慣",
+	"観",
+	"関",
+	"顔",
+	"願",
+	"危",
+	"喜",
+	"寄",
+	"幾",
+	"期",
+	"機",
+	"規",
+	"記",
+	"疑",
+	"議",
+	"客",
+	"吸",
+	"求",
+	"球",
+	"給",
+	"居",
+	"許",
+	"供",
+	"共",
+	"恐",
+	"局",
+	"曲",
+	"勤",
+	"苦",
+	"具",
+	"偶",
+	"靴",
+	"君",
+	"係",
+	"形",
+	"景",
+	"経",
+	"警",
+	"迎",
+	"欠",
+	"決",
+	"件",
+	"権",
+	"険",
+	"原",
+	"現",
+	"限",
+	"呼",
+	"互",
+	"御",
+	"誤",
+	"交",
+	"候",
+	"光",
+	"向",
+	"好",
+	"幸",
+	"更",
+	"構",
+	"港",
+	"降",
+	"号"
+	];	
+
+var cachdoc = {
+	愛:"ái",
+	暗:"ám",
+	位:"vị",
+	偉:"vĩ",
+	易:"dịch",
+	違:"vi",
+	育:"dục",
+	因:"nhân",
+	引:"dẫn",
+	泳:"vịnh",
+	越:"việt",
+	園:"viên",
+	演:"diễn",
+	煙:"yên",
+	遠:"viễn",
+	押:"áp",
+	横:"hoành",
+	王:"vương",
+	化:"hóa",
+	加:"gia",
+	科:"khoa",
+	果:"quả",
+	過:"quá",
+	解:"giải",
+	回:"hồi",
+	皆:"giai",
+	絵:"hội",
+	害:"hại",
+	格:"cách",
+	確:"xác",
+	覚:"giác",
+	掛:"quải",
+	割:"cát",
+	活:"hoạt",
+	寒:"hàn",
+	完:"hoàn",
+	官:"quan",
+	感:"cảm",
+	慣:"quán",
+	観:"quan",
+	関:"quan",
+	顔:"nhan",
+	願:"nguyện",
+	危:"nguy",
+	喜:"hỉ",
+	寄:"kí",
+	幾:"ki",
+	期:"kì",
+	機:"ki",
+	規:"quy",
+	記:"kí",
+	疑:"nghi",
+	議:"nghị",
+	客:"khách",
+	吸:"hấp",
+	求:"cầu",
+	球:"cầu",
+	給:"cấp",
+	居:"cư",
+	許:"hứa",
+	供:"cung",
+	共:"cộng",
+	恐:"khủng",
+	局:"cục",
+	曲:"khúc",
+	勤:"cần",
+	苦:"khổ",
+	具:"cụ",
+	偶:"ngẫu",
+	靴:"ngoa",
+	君:"quân",
+	係:"hệ",
+	形:"hình",
+	景:"cảnh",
+	経:"kinh",
+	警:"cảnh",
+	迎:"nghênh",
+	欠:"khiếm",
+	決:"quyết",
+	件:"kiện",
+	権:"quyền",
+	険:"hiểm",
+	原:"nguyên",
+	現:"hiện",
+	限:"hạn",
+	呼:"hô",
+	互:"hỗ",
+	御:"ngự",
+	誤:"ngộ",
+	交:"giao",
+	候:"hậu",
+	光:"quang",
+	向:"hướng",
+	好:"hảo",
+	幸:"hạnh",
+	更:"canh",
+	構:"cầu",
+	港:"cảng",
+	降:"hàng",
+	号:"hào",
+	};
+var nghia = {
+	愛:"Yêu thích. Quý trọng. Ơn thấm. Thân yêu.",
+	暗:"Tối. Trí thức kém cỏi cũng gọi là ám. Ngầm.",
+	位:"Ngôi, cái chỗ ngồi của mình được ở gọi là vị. Vị, nhời tôn kính người.",
+	偉:"Lạ, lớn.",
+	易:"Đổi. Biến đổi, thay. Kinh Dịch. Tích dịch [辟易] lùi lại. Một âm là dị. Sửa trị, làm.",
+	違:"Lìa. Trái. Lánh. Lầm lỗi.",
+	育:"Nuôi, nuôi cho khôn lớn gọi là dục. Sinh. Thơ bé.",
+	因:"Nhưng, vẫn thế. Nương tựa. Nguyên nhân. Tính nhân. Chỗ duyên theo đó mà phát ra.",
+	引:"Dương cung. Dắt. Rút ra. Bỏ đi. Kéo dài. Dẫn dụ.",
+	泳:"Lặn, đi ngầm dưới đáy nước.",
+	越:"Qua, vượt qua. Sự gì quá lắm cũng gọi là việt. Rơi đổ. Tan, phát dương ra. Nước Việt, đất Việt.",
+	園:"Vườn, chỗ đất để trồng hoa quả, rau dưa. Chỗ để chơi riêng. Lăng tẩm các vua đời xưa và mồ mả các phi tần cũng đều gọi là viên cả.",
+	演:"Diễn ra. Diễn thuyết, diễn giảng, nói cho tỏ rõ hết nghĩa ra",
+	煙:"Khói. Chất hơi nhiều gọi là yên. Thuốc hút. Nhọ nồi, than muội. Dị dạng của chữ [烟].",
+	遠:" Xa, trái lại với chữ cận [近]. Sâu xa. Dài dặc. Họ Viễn. Một âm là viển. Xa đi, coi sơ. Bỏ đi.",
+	押:"Ký. Giam giữ, bó buộc. Để làm bảo đảm (cầm). Thơ phú dùng vần gọi là áp, áp là đè ép vậy. Cái nẹp mành mành.",
+	横:"Giản thể của chữ [橫].",
+	王:"Vua. Tước vương. Tiếng gọi các tổ tiên. Chư hầu đời đời lại chầu gọi là vương. To, lớn. Một âm là vượng. Thịnh vượng.",
+	化:"Biến hóa. Phàm vật này mất mà vật kia sinh ra gọi là hóa.",
+	加:"Thêm. Chất thêm. Hơn.",
+	科:"Trình độ, phẩm cách, trong tràng học chia các khoa như văn khoa [文科] khoa học văn chương, lý khoa [理科] khoa học triết lý, v. ",
+	果:"Quả, trái cây. Quả quyết, quả cảm. Quả nhiên.Kết quả",
+	過:"Vượt. Lỗi, làm việc trái lẽ gọi là quá. Đã qua. Trách. Một âm là qua.",
+	解:"Bửa ra, mổ ra. Cởi ra. Tiêu tan mối thù oán cũng gọi là giải. Tan. Phân tách cho rõ lẽ rõ sự.",
+	回:"Về, đi rồi trở lại gọi là hồi. Cong queo. Hồi, một thiên tiểu thuyết gọi là một hồi.",
+	皆:"Đều, cùng, lời nói tóm cả mọi cái mọi sự. Khắp.",
+	絵:"Hội họa",
+	害:"Hại. Làm hại. Ghen ghét.",
+	格:"Chính. Cảm cách, lấy lòng thành làm cho người cảm phục gọi là cách. Xét cho cùng. Xô xát.",
+	確:"Bền, chắc. Đích xác. Dị dạng của chữ [确].",
+	覚:"Cảm giác, giác ngộ",
+	掛:"treo",
+	割:"Cắt đứt. Chia. Tổn hại.",
+	活:"Sống, phàm những sự để nuôi sống đều gọi là sinh hoạt [生活]. Hoạt bát (linh động nhanh nhẹn).",
+	寒:"Rét, khí hậu mùa đông. Lạnh. Cùng quẫn. Thôi. Run sợ.",
+	完:"Đủ, vẹn. Xong. Giữ được trọn vẹn. Bền chặt, kín đáo. Nộp xong.",
+	官:"Chức quan, mỗi người giữ một việc gì để trị nước gọi là quan.",
+	感:"Cảm hóa, lấy lời nói sự làm của mình làm cảm động được người gọi là cảm hóa",
+	慣:"Quen. Như tập quán [習慣] tập quen.",
+	観:"Quan sát, tham quan",
+	関:"Hải quan, quan hệ",
+	顔:"nhan sắc, Dị dạng của chữ [颜].",
+	願:"Muốn. Nguyện, dùng làm trợ từ, ý nói lòng muốn như thế. Khen ngợi, hâm mộ.",
+	危:"Cao, ở nơi cao mà ghê sợ gọi là nguy. Cái thế cao ngất như muốn đổ gọi là nguy.",
+	喜:"Mừng. Phàm những việc tốt lành đều gọi là việc hỉ. Một âm là hí.",
+	寄:"Phó thác. Gửi. Nhờ. Truyền đạt.",
+	幾:"Nhỏ, sự gì mới điềm ra có một tí gọi là ki. Sẽ tới, gần. Hẹn. Xét. Nguy.",
+	期:"Kì hẹn. Ắt thế, mong mỏi. Kì di [期頤] trăm tuổi.",
+	機:"Cái nẫy, cái máy, phàm cái gì do đấy mà phát động ra đều gọi là ki.",
+	規:"Cái khuôn tròn. Khuôn phép. Khuôn xử, lấy phép khuôn xử cho người khỏi sai lạc gọi là quy. ",
+	記:"Nhớ, nhớ kĩ cho khỏi quên. Ghi chép.",
+	疑:"Ngờ, lòng chưa tin đích gọi là nghi. Giống tựa. Lạ, lấy làm lạ. Sợ.",
+	議:"Bàn, bàn về sự lý để phân biệt phải trái gọi là luận [論], bàn về sự lý để định việc nên hay không gọi là nghị [議].",
+	客:"Khách, đối lại với chủ [主]. Gửi, trọ, ở ngoài đến ở nhờ gọi là khách. Mượn tạm.",
+	吸:"Hút hơi vào.",
+	求:"Tìm, phàm muốn được cái gì mà hết lòng tìm tòi cho được đều gọi là cầu.",
+	球:"Cái khánh ngọc. Quả tròn. Ngọc cầu, thứ ngọc đẹp.",
+	給:"Đủ dùng. Đủ, cấp giúp, giúp thêm cho. Bẻo lẻo, lém mép. Cung cấp.",
+	居:"Ở. Tích chứa. Chiếm. Yên.",
+	許:"Nghe theo, ừ cho. Hẹn được. Nước Hứa. Một âm là hử. Nơi, chốn. Một âm nữa là hổ.",
+	供:"Bầy, đặt. Vâng. Lời cung.",
+	共:"Cùng, chung.",
+	恐:"Sợ. Dọa nạt, làm cho người ta sợ hãi.",
+	局:"Cuộc, bộ phận. Nghề đánh bạc cũng chia mỗi người một việc cho nên cũng gọi là cục.",
+	曲:"Cong, lẽ không được thẳng cứng gọi là khúc. Ủy khúc, chỗ cong queo chật hẹp.",
+	勤:"Siêng. Ân cần [殷勤] tiếp đãi thân thiết tỏ ý hậu đãi.",
+	苦:"Đắng. Khốn khổ, tân khổ. Lo quá, vì cảnh ngoài bách đến làm cho khó chịu gọi là khổ.",
+	具:"Bày đủ. Gọi là đủ số. Đủ, hoàn bị, đủ cả. Đồ. Có tài năng gọi là tài cụ [才具].",
+	偶:"Chợt. Đôi, là số chẵn, phàm số chẵn đều gọi là ngẫu. Pho tượng. Bằng vai. Họ Ngẫu.",
+	靴:"Bì ngoa [皮靴] giày ủng làm bằng da.",
+	君:"Vua, người làm chủ cả một nước. Nghiêm quân [嚴君] cha, cha là chủ cả một nhà, cho nên lại gọi là phủ quân [府君].",
+	係:"Buộc, cũng nghĩa như chữ hệ [繫]. Nhời nói giúp lời",
+	形:"Hình thể. Hình dáng.",
+	景:"Cảnh, cái gì hình sắc phân phối có vẻ đẹp thú đều gọi là cảnh. Cảnh ngộ, quang cảnh.",
+	経:"Kinh tế, sách kinh, kinh độ",
+	警:"Răn bảo, lấy lời nói ghê gớm khiến cho người phải chú ý nghe gọi là cảnh.",
+	迎:"Đón. Đón trước, suy xét cái mối mừng giận của người khác mà đón trước chiều ý gọi là nghênh hợp [迎合]",
+	欠:"Ngáp. Thiếu. Nợ.",
+	決:"Khơi, tháo. Vỡ đê. Xử chém (trảm quyết). Quyết đoán. Nhất quyết. Cắn. Dứt, quyết liệt. ",
+	件:"Món đồ. Một vật, một việc. Phân biệt, phân biệt cái này cái khác.",
+	権:"Một dạng của chữ quyền [權].",
+	険:"Nguy hiểm, mạo hiểm, hiểm ác",
+	原:"Cánh đồng. Nơi tha ma, cửu nguyên [九原] chỗ quan khanh đại phu đời nhà Tấn để mả, về sau cứ dùng làm chữ gọi nơi tha ma là bởi cớ đó.",
+	現:"Hiển hiện, rõ ràng. Hiện ngay bây giờ. Có thực ngay đấy. Ánh sáng ngọc.",
+	限:"Giới hạn, cõi, có cái phạm vi nhất định không thể vượt qua được gọi là hạn. Cái bực cửa.",
+	呼:"Thở ra. Gọi. Kêu to, gọi to. Một âm là há.",
+	互:"Đắp đổi, hai bên cùng thay đổi với nhau.",
+	御:"Kẻ cầm cương xe. Cai trị tất cả. Hầu. Phàm các thứ gì của vua làm ra đều gọi là ngự cả.",
+	誤:"Lầm. Làm mê hoặc. Bị sự gì nó làm lụy.",
+	交:"Chơi. Liền tiếp. Có mối quan hệ với nhau. Nộp cho. Cùng. Khoảng. Phơi phới. Dâm dục.",
+	候:"Dò ngóng. Chực. Khí hậu. Cái tình trạng của sự vật gì cũng gọi là hậu.",
+	光:"Sáng. Vẻ vang. Rực rỡ. Bóng, vật gì mài giũa kỹ sáng bóng gọi là quang. Hết nhẵn.",
+	向:"Ngoảnh về, hướng về. Ngày xưa. Sắp.",
+	好:"Tốt, hay. Cùng thân. Xong. Một âm là hiếu.",
+	幸:"May, hạnh phúc. Cầu. Yêu dấu.",
+	更:"Đổi. Canh, một đêm chia làm năm canh. Thay. Trải. Đền lại. Một âm là cánh.",
+	構:"Dựng nhà. Gây nên, xây đắp, cấu tạo. Nhà to. Nên, thành. Xui nguyên dục bị. Châm chọc, phân rẽ.",
+	港:"Sông nhánh, ngành sông. Hương cảng [香港] (Hongkong) gọi tắt là cảng.",
+	降:"Rụng xuống. Phục, hàng phục. Một âm là giáng. Nên.",
+	号:"Cũng như chữ hiệu [號]. Giản thể của chữ [號].",
+	};
+	
+function function1(){
+    i = Math.floor(Math.random() * arr.length);
+	document.getElementById("demo").innerHTML = arr[i];  
+	document.getElementById("result").innerHTML ="";
+	document.getElementById("answer").innerHTML ="";
+	document.getElementById("mean").innerHTML ="";
+	$("#input").val("");
+	location.repeat();
+}
+function Myfunction(){
+	
+    var x,y;
+    
+    x = document.getElementById("form1");
+	y = x.elements["nameInput"].value;
+    
+    document.getElementById("result").innerHTML = y;
+    
+	if(cachdoc[arr[i]] == y){
+	document.getElementById("result").innerHTML = "true";
+	document.getElementById("mean").innerHTML = nghia[arr[i]];
+	document.getElementById("answer").innerHTML = "";
+	}else {
+	document.getElementById("result").innerHTML = "fail";
+	document.getElementById("answer").innerHTML = cachdoc[arr[i]];
+	document.getElementById("mean").innerHTML = nghia[arr[i]];
+	}
+}
+
+function enableLoop(){ // loop mp3
+		myaudio.loop = true;
+		myaudio.load();
+	}
+</script>
+
+</body>
+</html>
+
