@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Try hard N3</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css"  href="css/css_form.css">
+</head>
+
+<body >
+
+<!--toolbar-->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active" ><a href="homePage"><span class="glyphicon glyphicon-home"></span>  Home</a></li>
+      </ul>
+
+      <!--Search-->
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input id = "myInput"type="text" class="form-control" placeholder="You can search every thing ... ">
+      </div>
+      </form>   
+      <!--^^-->
+       <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-yen"></span> Goi N3
+          <span class="caret"></span></a>
+         <ul class="dropdown-menu">
+            <li><a href="miniGameGoiNihongoUnit1.html"><span class="glyphicon glyphicon-yen"></span> Unit 1</a></li>
+            <li><a href="miniGameGoiNihongoUnit2.html"><span class="glyphicon glyphicon-yen"></span>  Unit 2</a></li>
+            <li><a href="miniGameGoiNihongoUnit3.html"><span class="glyphicon glyphicon-yen"></span>  Unit 3</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-yen"></span>  Unit 4</a></li>
+		</ul>
+      </li>
+    </ul>
+	
+	 <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicons-coffee-cup"></span> Kanji N3
+          <span class="caret"></span></a>
+         <ul class="dropdown-menu">
+            <li><a href="miniGameGoiNihongounit1.html"><span class="glyphicons-coffee-cup"></span> Update product</a></li>
+            <li><a href="miniGameGoiNihongounit2.html"><span class="glyphicons-coffee-cup"></span>  Delete product</a></li>
+            <li><a href="miniGameGoiNihongounit3.html"><span class="glyphicons-coffee-cup"></span>  Add product</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-minus-sign"></span>  Delete User</a></li>
+		</ul>
+      </li>
+    </ul>
+	
+	<ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-king"></span> Grammer N3
+          <span class="caret"></span></a>
+         <ul class="dropdown-menu">
+            <li><a href="miniGameGoiNihongounit1.html"><span class="glyphicon glyphicon-wrench"></span> Update product</a></li>
+            <li><a href="miniGameGoiNihongounit2.html"><span class="glyphicon glyphicon-minus-sign"></span>  Delete product</a></li>
+            <li><a href="miniGameGoiNihongounit3.html"><span class="glyphicon glyphicon-plus-sign"></span>  Add product</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-minus-sign"></span>  Delete User</a></li>
+		</ul>
+      </li>
+    </ul>
+	
+    </div>
+  </div>
+</nav>
+  
+<!--content-->
+<div  class="container-fluid text-center" style="max-height:100%;">    
+  <div class="row content">
+<!---->
+
+		<center>
+			<div class="col-sm-2"> 
+				<image width = "100%" src = "D:\Programing\javaScript\image\heart.gif"><br>
+				<image width = "100%" src = "D:\Programing\javaScript\image\heart.gif"><br>
+				<image width = "100%" src = "D:\Programing\javaScript\image\heart.gif"><br>
+				<image width = "100%" src = "D:\Programing\javaScript\image\heart.gif"><br>
+				<image width = "100%" src = "D:\Programing\javaScript\image\heart.gif"><br>
+			</div>
+			
+			<div class="col-sm-8"> 
+				<image width = "92%" src = "D:\Programing\javaScript\image\love1.gif"><br>
+				<button onclick = "enableLoop()"> Best friend! </button> <br>
+				<audio id="myAudio" controls>
+					<source src="D:\Programing\javaScript\music\bestfriend.mp3" type="audio/mpeg">
+				</audio>
+			</div>
+			
+			<div class="col-sm-2"> 
+				<image width = "100%" src = "D:\Programing\javaScript\image\heart.gif"><br>
+				<image width = "100%" src = "D:\Programing\javaScript\image\heart.gif"><br>
+				<image width = "100%" src = "D:\Programing\javaScript\image\heart.gif"><br>
+				<image width = "100%" src = "D:\Programing\javaScript\image\heart.gif"><br>
+				<image width = "100%" src = "D:\Programing\javaScript\image\heart.gif"><br>
+			</div>
+		</center>
+
+		<script>
+			var myaudio = document.getElementById("myAudio");
+			  $(document).ready(function(){
+				$("#myInput").on("keyup", function() {
+				var value = $(this).val().toLowerCase();
+				$("#myTarget div").filter(function() {
+				  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+				});
+				});
+			  });
+			  
+			function enableLoop(){ // loop mp3
+			myaudio.loop = true;
+			myaudio.load();
+		}
+		</script>
+		
+	</div>
+</div>
+</body>
+</html>
