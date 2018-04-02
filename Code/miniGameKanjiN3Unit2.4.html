@@ -55,7 +55,7 @@
             <li><a href="miniGameKanjiN3Unit1.2.html"><span class="glyphicons glyphicons-coffee-cup"></span>  Unit 1.2</a></li>
             <li><a href="miniGameKanjiN3Unit1.3.html"><span class="glyphicons glyphicons-coffee-cup"></span>  Unit 1.3</a></li>
             <li><a href="miniGameKanjiN3Unit1.4.html"><span class="glyphicons glyphicons-coffee-cup"></span>  Unit 1.4</a></li>
-            <li><a href="miniGameKanjiN3Unit2.1.html"><span class="glyphicons glyphicons-coffee-cup"></span>  Unit 2.1</a></li>
+            <li><a href="miniGameKanjiN3Unit1.5.html"><span class="glyphicons glyphicons-coffee-cup"></span>  Unit 1.5</a></li>
             <li><a href="miniGameKanjiN3Unit1.6.html"><span class="glyphicons glyphicons-coffee-cup"></span>  Unit 1.6</a></li>
             <li><a href="#"><span class="glyphicon glyphicon-minus-sign"></span>  Delete User</a></li>
 		</ul>
@@ -84,13 +84,13 @@
 <button onclick = "enableLoop()"> ahihi -_- quẩy nào :))</button> 
 <br>
 <audio id="myAudio" controls>
-  <source src="D:\MinigameNihongo\javaScript\music\faded.mp3" type="audio/mpeg">
+  <source src="D:\MinigameNihongo\javaScript\music\kpdvd.mp3" type="audio/mpeg">
 </audio>
 </div>
 <!--Hirakana-->
 <div class="col-sm-4">
 <br>
-<h1>Unit 1.4 !</h1>
+<h1>Unit 2.4 !</h1>
 <p>Hirakana? </p>
 <h1 id="demo2"></h1>
 
@@ -111,7 +111,7 @@
 <!--Han tu-->
 <div class="col-sm-4">
 <br>
-<h1>Unit 1.4 !</h1>
+<h1>Unit 2.4 !</h1>
 <p>Hán tự của từ ? </p>
 <h1 id="demo"></h1>
 
@@ -134,52 +134,73 @@
 	var i = -1;
 	var j = -1;
 	var arr = [
-	"番線",
-	"方面",
-	"普通",
-	"各駅",
-	"各国",
-	"目次",
-	"次回",
-	"快速",
-	"過去",
-	"鉄道"
+	"市役所",
+	"役員",
+	"役に立つ",
+	"郵便",
+	"郵便局",
+	"薬局",
+	"交番",
+	"交通",
+	"交換",
+	"差し出す",
+	"差出人",
+	"交差点",
+	"点数",
+	"歩道橋",
+	"公園"
 	];	
 
 var hantu = {
-	番線:"phiên tuyến",
-	方面:"phương diện",
-	普通:"phổ thông",
-	各駅:"các dịch",
-	各国:"các quốc",
-	目次:"mục thứ",
-	次回:"thứ hồi",
-	快速:"khoái tốc",
-	過去:"quá khứ",
-	鉄道:"thiết đạo",
+	市役所:"thị dịch sở",
+	役員:"dịch viên",
+	役に立つ:"dịch lập",
+	郵便:"bưu tiện",
+	郵便局:"bưu tiện cục",
+	薬局:"dược cục",
+	交番:"giao phiên",
+	交通:"giao thông",
+	交換:"giao hoán",
+	差し出す:"soa xuất",
+	差出人:"soa xuất nhân",
+	交差点:"giao soa điểm",
+	点数:"điểm số",
+	歩道橋:"bộ đạo kiều",
+	公園:"công viên",
 	};
 var cachdoc = {
-	番線:"ばんせん",
-	方面:"ほうめん",
-	普通:"ふつう",
-	各駅:"かくえき",
-	各国:"かくこく",
-	目次:"じかい",
-	次回:"びじゅつかん",
-	快速:"かいそく",
-	鉄道:"てつどう",
+	市役所:"しやくしょ",
+	役員:"やくいん",
+	役に立つ:"やくにたつ",
+	郵便:"ゆうびん",
+	郵便局:"ゆうびんきょく",
+	薬局:"やっきょく",
+	交番:"こうばん",
+	交通:"こうつう",
+	交換:"こうかん",
+	差し出す:"さしだす",
+	差出人:"さしだしにん",
+	交差点:"こうさてん",
+	点数:"てんすう",
+	歩道橋:"ほどうきょう",
+	公園:"こうえん",
 	};
 var nghia = {
-	番線:"~ばんせん Tuyến số ~",
-	方面:"~ほうめん Đi về hướng ~",
-	普通:"ふつう(の) Phổ thông, thông thường",
-	各駅:"かくえき Mỗi ga",
-	各国:"かくこく Mỗi quốc gia",
-	目次:"もくじ Mục lục",
-	次回:"じかい Lần sau, lần tiếp theo",
-	快速:"かいそく Cao tốc",
-	過去:"かこ Qúa khứ",
-	鉄道:"てつどう Đường sắt",
+	市役所:"しやくしょ Tòa thị chính, ủy ban nhân dân",
+	役員:"やくいん Công chức",
+	役に立つ:"やくにたつ Có ích, có lợi, useful",
+	郵便:"ゆうびん Bưu chính",
+	郵便局:"ゆうびんきょく Bưu điện",
+	薬局:"やっきょく Tiện thuốc tây",
+	交番:"こうばん Đồn cảnh sát",
+	交通:"こうつう giao thông ",
+	交換:"こうかん Trao đổi, giao dịch",
+	差し出す:"さしだす Đưa ra, lấy ra, gửi",
+	差出人:"さしだしにん Người gửi",
+	交差点:"こうさてん Giao lộ, ngã tư",
+	点数:"てんすう Điểm số",
+	歩道橋:"ほどうきょう Cầu vượt dành cho người đi bộ",
+	公園:"こうえん Công viên",
 	};
 //hirakana
 	function function2(){
