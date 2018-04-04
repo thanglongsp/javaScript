@@ -55,7 +55,7 @@
             <li><a href="miniGameKanjiN3Unit1.2.html"><span class="glyphicons glyphicons-coffee-cup"></span>  Unit 1.2</a></li>
             <li><a href="miniGameKanjiN3Unit1.3.html"><span class="glyphicons glyphicons-coffee-cup"></span>  Unit 1.3</a></li>
             <li><a href="miniGameKanjiN3Unit1.4.html"><span class="glyphicons glyphicons-coffee-cup"></span>  Unit 1.4</a></li>
-            <li><a href="miniGameKanjiN3Unit2.1.html"><span class="glyphicons glyphicons-coffee-cup"></span>  Unit 2.1</a></li>
+            <li><a href="miniGameKanjiN3Unit1.5.html"><span class="glyphicons glyphicons-coffee-cup"></span>  Unit 1.5</a></li>
             <li><a href="miniGameKanjiN3Unit1.6.html"><span class="glyphicons glyphicons-coffee-cup"></span>  Unit 1.6</a></li>
             <li><a href="#"><span class="glyphicon glyphicon-minus-sign"></span>  Delete User</a></li>
 		</ul>
@@ -84,13 +84,13 @@
 <button onclick = "enableLoop()"> ahihi -_- quẩy nào :))</button> 
 <br>
 <audio id="myAudio" controls>
-  <source src="D:\MinigameNihongo\javaScript\music\faded.mp3" type="audio/mpeg">
+  <source src="D:\MinigameNihongo\javaScript\music\kpdvd.mp3" type="audio/mpeg">
 </audio>
 </div>
 <!--Hirakana-->
 <div class="col-sm-4">
 <br>
-<h1>Unit 1.4 !</h1>
+<h1>Unit 2.5 !</h1>
 <p>Hirakana? </p>
 <h1 id="demo2"></h1>
 
@@ -111,7 +111,7 @@
 <!--Han tu-->
 <div class="col-sm-4">
 <br>
-<h1>Unit 1.4 !</h1>
+<h1>Unit 2.5 !</h1>
 <p>Hán tự của từ ? </p>
 <h1 id="demo"></h1>
 
@@ -134,52 +134,73 @@
 	var i = -1;
 	var j = -1;
 	var arr = [
-	"番線",
-	"方面",
-	"普通",
-	"各駅",
-	"各国",
-	"目次",
-	"次回",
-	"快速",
-	"過去",
-	"鉄道"
+	"受信",
+	"受検",
+	"受ける",
+	"片付ける",
+	"受付",
+	"科学",
+	"教科書",
+	"耳鼻科",
+	"主婦",
+	"形式",
+	"図形",
+	"整形外科",
+	"骨折",
+	"右折",
+	"折紙"
 	];	
 
 var hantu = {
-	番線:"phiên tuyến",
-	方面:"phương diện",
-	普通:"phổ thông",
-	各駅:"các dịch",
-	各国:"các quốc",
-	目次:"mục thứ",
-	次回:"thứ hồi",
-	快速:"khoái tốc",
-	過去:"quá khứ",
-	鉄道:"thiết đạo",
+	受信:"thụ tín",
+	受検:"thụ kiểm",
+	受ける:"thụ",
+	片付ける:"phiến phó",
+	受付:"thụ phó",
+	科学:"khoa học",
+	教科書:"giáo khoa thư",
+	耳鼻科:"nhĩ tị khoa",
+	主婦:"chủ phụ",
+	形式:"soa xuất",
+	図形:"đồ hình",
+	整形外科:"chỉnh hình ngoại khoa",
+	骨折:"cốt chiết",
+	右折:"hữu chiết",
+	折紙:"chiết chỉ",
 	};
 var cachdoc = {
-	番線:"ばんせん",
-	方面:"ほうめん",
-	普通:"ふつう",
-	各駅:"かくえき",
-	各国:"かくこく",
-	目次:"じかい",
-	次回:"びじゅつかん",
-	快速:"かいそく",
-	鉄道:"てつどう",
+	受信:"じゅしん",
+	受検:"じゅけん",
+	受ける:"うける",
+	片付ける:"かたづける",
+	受付:"うけつけ",
+	科学:"かがく",
+	教科書:"きょうかしょ",
+	耳鼻科:"じびか",
+	主婦:"しゅふ",
+	形式:"けいしき",
+	図形:"ずけい",
+	整形外科:"せいけいげか",
+	骨折:"こっせつ",
+	右折:"うせつ",
+	折紙:"おりがみ",
 	};
 var nghia = {
-	番線:"~ばんせん Tuyến số ~",
-	方面:"~ほうめん Đi về hướng ~",
-	普通:"ふつう(の) Phổ thông, thông thường",
-	各駅:"かくえき Mỗi ga",
-	各国:"かくこく Mỗi quốc gia",
-	目次:"もくじ Mục lục",
-	次回:"じかい Lần sau, lần tiếp theo",
-	快速:"かいそく Cao tốc",
-	過去:"かこ Qúa khứ",
-	鉄道:"てつどう Đường sắt",
+	受信:"じゅしん Nhận (tin nhắn)",
+	役員:"じゅけん Thi (vào), dự thi",
+	受ける:"うける Nhận, dự thi",
+	片付ける:"かたづける Sắp xếp,dọn dẹp",
+	受付:"うけつけ Quầy tiếp tân, lễ tân",
+	科学:"かがく Khoa học",
+	教科書:"きょうかしょ Sách giáo khoa",
+	耳鼻科:"じびか Khoa tai mũi họng",
+	主婦:"しゅふ Nội trợ",
+	形式:"けいしき Hình thức",
+	図形:"ずけい hình vẽ",
+	整形外科:"せいけいげか Khoa chỉnh hình ngoại khoa",
+	骨折:"こっせつ Gãy xương",
+	右折:"うせつ Rẽ phải",
+	折紙:"おりがみ Nghệ thuật gấp giấy",
 	};
 //hirakana
 	function function2(){
