@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Try hard N3'Kanji</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css"  href="css/css_form.css">
+</head>
+<body>
+<!--toolbar-->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active" ><a href="homePage.html"><span class="glyphicon glyphicon-home"></span>  Home</a></li>
+      </ul>
+
+      <!--Search-->
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input id = "myInput"type="text" class="form-control" placeholder=" ... ">
+      </div>
+      </form>   
+      <!--^^-->
+       <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-king"></span> Goi N3
+          <span class="caret"></span></a>
+         <ul class="dropdown-menu">
+            <li><a href="miniGameGoiNihongoUnit1.html"><span class="glyphicon glyphicon-wrench"></span> Unit 1</a></li>
+            <li><a href="miniGameGoiNihongoUnit2.html"><span class="glyphicon glyphicon-minus-sign"></span>  Unit 2</a></li>
+            <li><a href="miniGameGoiNihongoUnit3.html"><span class="glyphicon glyphicon-plus-sign"></span>  Unit 3</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-minus-sign"></span>  xxx</a></li>
+		</ul>
+      </li>
+    </ul>
+	
+	 <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicons glyphicons-coffee-cup"></span> Kanji N3
+          <span class="caret"></span></a>
+         <ul class="dropdown-menu">
+            <li><a href="miniGameKanjiN3Unit1.1.html"><span class="glyphicons glyphicons-coffee-cup"></span>  Unit 1.1</a></li>
+            <li><a href="miniGameKanjiN3Unit1.2.html"><span class="glyphicons glyphicons-coffee-cup"></span>  Unit 1.2</a></li>
+            <li><a href="miniGameKanjiN3Unit1.3.html"><span class="glyphicons glyphicons-coffee-cup"></span>  Unit 1.3</a></li>
+            <li><a href="miniGameKanjiN3Unit1.4.html"><span class="glyphicons glyphicons-coffee-cup"></span>  Unit 1.4</a></li>
+            <li><a href="miniGameKanjiN3Unit1.5.html"><span class="glyphicons glyphicons-coffee-cup"></span>  Unit 1.5</a></li>
+            <li><a href="miniGameKanjiN3Unit1.6.html"><span class="glyphicons glyphicons-coffee-cup"></span>  Unit 1.6</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-minus-sign"></span>  Delete User</a></li>
+		</ul>
+      </li>
+    </ul>
+	
+	<ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-king"></span> Grammer N3
+          <span class="caret"></span></a>
+         <ul class="dropdown-menu">
+            <li><a href="miniGameGoiNihongounit1.html"><span class="glyphicon glyphicon-wrench"></span> Update product</a></li>
+            <li><a href="miniGameGoiNihongounit2.html"><span class="glyphicon glyphicon-minus-sign"></span>  Delete product</a></li>
+            <li><a href="miniGameGoiNihongounit3.html"><span class="glyphicon glyphicon-plus-sign"></span>  Add product</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-minus-sign"></span>  Delete User</a></li>
+		</ul>
+      </li>
+    </ul>
+	
+    </div>
+  </div>
+</nav>
+<center>
+<div class= "col-sm-4">
+<image width = "60%" src = "D:\MinigameNihongo\javaScript\image\haicot.gif"><br>
+<button onclick = "enableLoop()"> ahihi -_- quẩy nào :))</button> 
+<br>
+<audio id="myAudio" controls>
+  <source src="D:\MinigameNihongo\javaScript\music\kpdvd.mp3" type="audio/mpeg">
+</audio>
+</div>
+<!--Hirakana-->
+<div class="col-sm-4">
+<br>
+<h1>Unit 2.4 !</h1>
+<p>Hirakana? </p>
+<h1 id="demo2"></h1>
+
+<form id="form2">
+<input id = "input2" name="nameInput2" type="text"> 
+</form>
+<br>
+
+<!-- <img id="result" src="D:\MinigameNihongo\javaScript\image\off.png" style="width:100px"><br> -->
+<button onclick = "Myfunction2()">Check!</button> <button onclick = "function2()">next!</button>
+<br>
+<br>
+<p id = "result2"></p>
+<h3 id = "answer2"></h3>
+<p id = "mean2"></p>
+</div>
+
+<!--Han tu-->
+<div class="col-sm-4">
+<br>
+<h1>Unit 2.4 !</h1>
+<p>Hán tự của từ ? </p>
+<h1 id="demo"></h1>
+
+<form id="form1">
+<input id = "input" name="nameInput" type="text"> 
+</form>
+<br>
+
+<!-- <img id="result" src="D:\MinigameNihongo\javaScript\image\off.png" style="width:100px"><br> -->
+<button onclick = "Myfunction()">Check!</button> <button onclick = "function1()">next!</button>
+<br>
+<br>
+<p id = "result"></p>
+<h3 id = "answer"></h3>
+<p id = "mean"></p>
+</div>
+</center>
+<script>
+	var myaudio = document.getElementById("myAudio");
+	var i = -1;
+	var j = -1;
+	var arr = [
+	"市役所",
+	"役員",
+	"役に立つ",
+	"郵便",
+	"郵便局",
+	"薬局",
+	"交番",
+	"交通",
+	"交換",
+	"差し出す",
+	"差出人",
+	"交差点",
+	"点数",
+	"歩道橋",
+	"公園"
+	];	
+
+var hantu = {
+	市役所:"thị dịch sở",
+	役員:"dịch viên",
+	役に立つ:"dịch lập",
+	郵便:"bưu tiện",
+	郵便局:"bưu tiện cục",
+	薬局:"dược cục",
+	交番:"giao phiên",
+	交通:"giao thông",
+	交換:"giao hoán",
+	差し出す:"soa xuất",
+	差出人:"soa xuất nhân",
+	交差点:"giao soa điểm",
+	点数:"điểm số",
+	歩道橋:"bộ đạo kiều",
+	公園:"công viên",
+	};
+var cachdoc = {
+	市役所:"しやくしょ",
+	役員:"やくいん",
+	役に立つ:"やくにたつ",
+	郵便:"ゆうびん",
+	郵便局:"ゆうびんきょく",
+	薬局:"やっきょく",
+	交番:"こうばん",
+	交通:"こうつう",
+	交換:"こうかん",
+	差し出す:"さしだす",
+	差出人:"さしだしにん",
+	交差点:"こうさてん",
+	点数:"てんすう",
+	歩道橋:"ほどうきょう",
+	公園:"こうえん",
+	};
+var nghia = {
+	市役所:"しやくしょ Tòa thị chính, ủy ban nhân dân",
+	役員:"やくいん Công chức",
+	役に立つ:"やくにたつ Có ích, có lợi, useful",
+	郵便:"ゆうびん Bưu chính",
+	郵便局:"ゆうびんきょく Bưu điện",
+	薬局:"やっきょく Tiện thuốc tây",
+	交番:"こうばん Đồn cảnh sát",
+	交通:"こうつう giao thông ",
+	交換:"こうかん Trao đổi, giao dịch",
+	差し出す:"さしだす Đưa ra, lấy ra, gửi",
+	差出人:"さしだしにん Người gửi",
+	交差点:"こうさてん Giao lộ, ngã tư",
+	点数:"てんすう Điểm số",
+	歩道橋:"ほどうきょう Cầu vượt dành cho người đi bộ",
+	公園:"こうえん Công viên",
+	};
+//hirakana
+	function function2(){
+		j = j+1;
+		//i = Math.floor(Math.random() * arr.length);
+		document.getElementById("demo2").innerHTML = arr[j];  
+		document.getElementById("result2").innerHTML ="";
+		document.getElementById("answer2").innerHTML ="";
+		document.getElementById("mean2").innerHTML ="";
+		$("#input2").val("");
+		location.repeat();
+	}
+	function Myfunction2(){
+		
+		var x,y;
+		
+		x = document.getElementById("form2");
+		y = x.elements["nameInput2"].value;
+		
+		document.getElementById("result2").innerHTML = y;
+		
+		if(cachdoc[arr[j]] == y){
+		document.getElementById("result2").innerHTML = "true";
+		document.getElementById("mean2").innerHTML = nghia[arr[j]];
+		document.getElementById("answer2").innerHTML = "";
+		}else {
+		document.getElementById("result2").innerHTML = "fail";
+		document.getElementById("answer2").innerHTML = hantu[arr[j]];
+		document.getElementById("mean2").innerHTML = nghia[arr[j]];
+		}
+	}
+//kanji hantu	
+	function function1(){
+		i = i+1;
+		//i = Math.floor(Math.random() * arr.length);
+		document.getElementById("demo").innerHTML = arr[i];  
+		document.getElementById("result").innerHTML ="";
+		document.getElementById("answer").innerHTML ="";
+		document.getElementById("mean").innerHTML ="";
+		$("#input").val("");
+		location.repeat();
+	}
+	function Myfunction(){
+		
+		var x,y;
+		
+		x = document.getElementById("form1");
+		y = x.elements["nameInput"].value;
+		
+		document.getElementById("result").innerHTML = y;
+		
+		if(hantu[arr[i]] == y){
+		document.getElementById("result").innerHTML = "true";
+		document.getElementById("mean").innerHTML = nghia[arr[i]];
+		document.getElementById("answer").innerHTML = "";
+		}else {
+		document.getElementById("result").innerHTML = "fail";
+		document.getElementById("answer").innerHTML = hantu[arr[i]];
+		document.getElementById("mean").innerHTML = nghia[arr[i]];
+		}
+	}
+//...
+function enableLoop(){ // loop mp3
+		myaudio.loop = true;
+		myaudio.load();
+	}
+</script>
+
+</body>
+</html>
+
