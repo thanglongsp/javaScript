@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Try hard N3'Kanji</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css"  href="css/css_form.css">
+</head>
+<body>
+<!--toolbar-->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active" ><a href="homePage.html"><span class="glyphicon glyphicon-home"></span>  Home</a></li>
+      </ul>
+
+      <!--Search-->
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input id = "myInput"type="text" class="form-control" placeholder=" ... ">
+      </div>
+      </form>   
+      <!--^^-->
+       <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-king"></span> Goi N3
+          <span class="caret"></span></a>
+         <ul class="dropdown-menu">
+            <li><a href="miniGameGoiNihongoUnit1.html"><span class="glyphicon glyphicon-wrench"></span> Unit 1</a></li>
+            <li><a href="miniGameGoiNihongoUnit2.html"><span class="glyphicon glyphicon-minus-sign"></span>  Unit 2</a></li>
+            <li><a href="miniGameGoiNihongoUnit3.html"><span class="glyphicon glyphicon-plus-sign"></span>  Unit 3</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-minus-sign"></span>  xxx</a></li>
+		</ul>
+      </li>
+    </ul>
+	
+	 <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicons glyphicons-coffee-cup"></span> Kanji N3
+          <span class="caret"></span></a>
+         <ul class="dropdown-menu">
+            <li><a href="miniGameKanjiN3Unit1.1.html"><span class="glyphicons glyphicons-coffee-cup"></span>  Unit 1.1</a></li>
+            <li><a href="miniGameKanjiN3Unit1.2.html"><span class="glyphicons glyphicons-coffee-cup"></span>  Unit 1.2</a></li>
+            <li><a href="miniGameKanjiN3Unit1.3.html"><span class="glyphicons glyphicons-coffee-cup"></span>  Unit 1.3</a></li>
+            <li><a href="miniGameKanjiN3Unit1.4.html"><span class="glyphicons glyphicons-coffee-cup"></span>  Unit 1.4</a></li>
+            <li><a href="miniGameKanjiN3Unit1.5.html"><span class="glyphicons glyphicons-coffee-cup"></span>  Unit 1.5</a></li>
+            <li><a href="miniGameKanjiN3Unit1.6.html"><span class="glyphicons glyphicons-coffee-cup"></span>  Unit 1.6</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-minus-sign"></span>  Delete User</a></li>
+		</ul>
+      </li>
+    </ul>
+	
+	<ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-king"></span> Grammer N3
+          <span class="caret"></span></a>
+         <ul class="dropdown-menu">
+            <li><a href="miniGameGoiNihongounit1.html"><span class="glyphicon glyphicon-wrench"></span> Update product</a></li>
+            <li><a href="miniGameGoiNihongounit2.html"><span class="glyphicon glyphicon-minus-sign"></span>  Delete product</a></li>
+            <li><a href="miniGameGoiNihongounit3.html"><span class="glyphicon glyphicon-plus-sign"></span>  Add product</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-minus-sign"></span>  Delete User</a></li>
+		</ul>
+      </li>
+    </ul>
+	
+    </div>
+  </div>
+</nav>
+<center>
+<div class= "col-sm-5">
+<image width = "60%" src = "D:\MinigameNihongo\javaScript\image\haicot.gif"><br>
+<button onclick = "enableLoop()"> ahihi -_- quẩy nào :))</button> 
+<br>
+<audio id="myAudio" controls>
+  <source src="D:\MinigameNihongo\javaScript\music\kpdvd.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<div class="col-sm-7">
+<br>
+<br>
+<h1>Unit 1.2 !</h1>
+<p>What is this word mean? </p>
+<h1 id="demo"></h1>
+
+<form id="form1">
+<input id = "input" name="nameInput" type="text"> 
+</form>
+<br>
+
+<!-- <img id="result" src="D:\MinigameNihongo\javaScript\image\off.png" style="width:100px"><br> -->
+<button onclick = "Myfunction()">Check!</button> <button onclick = "function1()">next!</button>
+<br>
+<br>
+<p id = "result"></p>
+<h3 id = "answer"></h3>
+<p id = "mean"></p>
+</div>
+</center>
+<script>
+	var myaudio = document.getElementById("myAudio");
+	var i = -1;
+	var arr = [
+	"横",
+	"横断",
+	"横断歩道",
+	"押す",
+	"押さえる",
+	"押し入れ",
+	"押しボタン式",
+	"入学式",
+	"数式",
+	"送信",
+	"信じる",
+	"自信",
+	"信用",
+	"信号",
+	"号車",
+	"正確",
+	"確か",
+	"確かめる",
+	"確認",
+	"認める",
+	"飛行場",
+	"飛ぶ"
+	];	
+
+var cachdoc = {
+	横:"hoành",
+	横断:"hoành đoạn",
+	横断歩道:"hoành đoạn bộ đạo",
+	押す:"áp",
+	押さえる:"áp",
+	押し入れ:"áp nhập",
+	押しボタン式:"áp thức",
+	入学式:"nhập học thức",
+	数式:"số thức",
+	送信:"tống tín",
+	信じる:"tín",
+	自信:"tự tín",
+	信用:"tín dụng",
+	信号:"tín hiệu",
+	号車:"hiệu xa",
+	正確:"chính xác",
+	確か:"xác",
+	確かめる:"xác",
+	確認:"xác nhận",
+	認める:"nhận",
+	飛行場:"phi hành trường",
+	飛ぶ:"phi",
+	};
+var nghia = {
+	横:"よこ Bên cạnh",
+	横断:"おうだん Băng ngang qua (đường)",
+	横断歩道:"おうだんほどう Đường cho người đi bộ sang đường; đường đi bộ",
+	押す:"おす Ấn, nhấn (nút)",
+	押さえる:"おさえる Nhấn giữ (nút), giữ lại",
+	押し入れ:"おしいれ Tủ chìm",
+	押しボタン式:"おしボダンしき Kiểu có nút nhấn",
+	入学式:"にゅうがくしき Lễ khai giảng",
+	数式:"すうしき Công thức số",
+	送信:"そうしん Gửi (mail ...)",
+	信じる:"しんじる Tin vào điều gì đó ... ",
+	自信:"じしん Tự tin",
+	信用:"しんよう Tin dùng, tín nhiệm",
+	信号:"しんごう Đèn tín hiệu giao thông",
+	号車:"ごうしゃ Toa(tàu) số ... ",
+	正確:"せいかく Chính xác",
+	確か:"たしか（な） Chính xác, chắc ..",
+	確かめる:"たしかめる Xác nhận",
+	確認:"かくにん Sự xác nhận",
+	認める:"みとめる Chấp nhận, cho phép",
+	飛行場:"ひこうじょう Sân bay",
+	飛ぶ:"とぶ Bay",
+	};
+
+	function function1(){
+		i = i+1;
+		//i = Math.floor(Math.random() * arr.length);
+		document.getElementById("demo").innerHTML = arr[i];  
+		document.getElementById("result").innerHTML ="";
+		document.getElementById("answer").innerHTML ="";
+		document.getElementById("mean").innerHTML ="";
+		$("#input").val("");
+		location.repeat();
+	}
+	function Myfunction(){
+		
+		var x,y;
+		
+		x = document.getElementById("form1");
+		y = x.elements["nameInput"].value;
+		
+		document.getElementById("result").innerHTML = y;
+		
+		if(cachdoc[arr[i]] == y){
+		document.getElementById("result").innerHTML = "true";
+		document.getElementById("mean").innerHTML = nghia[arr[i]];
+		document.getElementById("answer").innerHTML = "";
+		}else {
+		document.getElementById("result").innerHTML = "fail";
+		document.getElementById("answer").innerHTML = cachdoc[arr[i]];
+		document.getElementById("mean").innerHTML = nghia[arr[i]];
+		}
+	}
+
+function enableLoop(){ // loop mp3
+		myaudio.loop = true;
+		myaudio.load();
+	}
+</script>
+
+</body>
+</html>
+
